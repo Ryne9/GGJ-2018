@@ -33,11 +33,12 @@ namespace Assets.Scripts
             return true;
         }
 
-        public bool AddBlip()
+        public bool AddBlips(int blips)
         {
             if (currentBlips == maxBlips)
                 return false;
-            currentBlips++;
+            else if (currentBlips + blips >= maxBlips)
+                currentBlips = maxBlips;
             return true;
         }
 
