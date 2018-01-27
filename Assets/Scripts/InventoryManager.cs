@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts;
 
-public class InventoryManager : MonoBehaviour {
+public class InventoryController : MonoBehaviour
+{
 
     Inventory inventory;
     int maxResources = 10;
     int maxBlips = 50;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         inventory = new Inventory(maxResources, maxBlips);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         inventory.AddResource(1);
-	}
+    }
+
+    public void AddBlips(int blips)
+    {
+        inventory.AddBlips(blips);
+    }
 }

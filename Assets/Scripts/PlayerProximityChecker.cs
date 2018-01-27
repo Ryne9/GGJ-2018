@@ -9,23 +9,19 @@ public class PlayerProximityChecker : MonoBehaviour {
     public float triggerProx;
     public Transform player1;
     public Transform player2;
+    public MenuController menuController;
 
 	// Use this for initialization
 	void Start () {
         triggerProx = 3f;
+        menuController = GetComponent<MenuController>();
+        menuController.SetPlayers(player1.gameObject, player2.gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         player1Prox = Vector3.Distance(transform.position, player1.transform.position);
         player2Prox = Vector3.Distance(transform.position, player2.transform.position);
-        if (player1Prox < triggerProx)
-        {
-            print("GET PLAYER 1 AWAY!!!!");
-        }
-        if (player2Prox < triggerProx)
-        {
-            print("GET PLAYER 2 AWAY!!!!");
-        }
+        menuController.PlayerAlert(player1Prox < triggerProx, player2Prox < triggerProx);
     }
 }

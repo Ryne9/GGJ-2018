@@ -24,8 +24,8 @@ public class Player1_Movement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-        Debug.Log("P1: " + " A:" + Input.GetButton("P1_A") + " B:" + Input.GetButton("P1_B") + " X:" + Input.GetButton("P1_X") + " Y:" + Input.GetButton("P1_Y") + "\n" +
-                  "P2: " + " A:" + Input.GetButton("P2_A") + " B:" + Input.GetButton("P2_B") + " X:" + Input.GetButton("P2_X") + " Y:" + Input.GetButton("P2_Y") + "\n");
+        //Debug.Log("P1: " + " A:" + Input.GetButton("P1_A") + " B:" + Input.GetButton("P1_B") + " X:" + Input.GetButton("P1_X") + " Y:" + Input.GetButton("P1_Y") + "\n" +
+                  //"P2: " + " A:" + Input.GetButton("P2_A") + " B:" + Input.GetButton("P2_B") + " X:" + Input.GetButton("P2_X") + " Y:" + Input.GetButton("P2_Y") + "\n");
 
 		if (canMove)
 		{

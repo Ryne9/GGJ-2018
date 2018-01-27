@@ -10,7 +10,6 @@ public class MissionController : MonoBehaviour {
     public int totalMissionCount;
     public int activeMissionCount;
     ArrayList activeMissions;
-    public Canvas canvas;
 
 	void Start () {
         totalMissionCount = 15;
@@ -40,7 +39,7 @@ public class MissionController : MonoBehaviour {
             m.DecrementTime(Time.deltaTime);
             if (m.GetTimeLeft() <= 0)
             {
-                print("YOU'RE OUT OF TIME!!!!");
+                //print("YOU'RE OUT OF TIME!!!!");
             }
         }
 	}
