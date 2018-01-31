@@ -4,6 +4,7 @@ Global Game Jam 2018 - Unity Project
 **Before making an changes make sure you adjust your Unity settings.**
 * Go to Edit > Project Settings > Editor
 * Make sure Mode under Version Control is set to "Visible Meta Files" and Mode under Asset Serialization is set to "Force Text".
+**Also make sure you have Blender installed. If models don't show up, install Blender and use Assets > Reimport All to regenerate your Library.**
 
 Basic principles:
 * Fork this repo.
