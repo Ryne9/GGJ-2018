@@ -51,6 +51,7 @@ public class FabricatorController : MonoBehaviour, MachineController {
                     coroutineGoal = 0;
                     menuController.cleanupSlate();
                     source.PlayOneShot(source.clip);
+                    inventoryManager.RemoveResource(coroutineGoal);
                     StartCoroutine("FabricatorMiniGame");
                 }           
                 break;
@@ -62,6 +63,7 @@ public class FabricatorController : MonoBehaviour, MachineController {
                     coroutineGoal = 1;
                     menuController.cleanupSlate();
                     source.PlayOneShot(source.clip);
+                    inventoryManager.RemoveResource(coroutineGoal);
                     StartCoroutine("FabricatorMiniGame");
                 }
                 break;
@@ -73,6 +75,7 @@ public class FabricatorController : MonoBehaviour, MachineController {
                     coroutineGoal = 2;
                     menuController.cleanupSlate();
                     source.PlayOneShot(source.clip);
+                    inventoryManager.RemoveResource(coroutineGoal);
                     StartCoroutine("FabricatorMiniGame");
                 }
                 break;
@@ -148,7 +151,6 @@ public class FabricatorController : MonoBehaviour, MachineController {
 
             }
         }
-        inventoryManager.RemoveResource(coroutineGoal);
         inventoryManager.AddResource(coroutineGoal + 3);
         menuController.Unfocus();
         source.PlayOneShot(source.clip);

@@ -14,7 +14,7 @@ public class MutatorController : MonoBehaviour, MachineController {
 
     public RectTransform miniA;
     public RectTransform miniB;
-    public RectTransform miniX;
+    public RectTransform miniX; 
     public RectTransform miniY;
 
     // Use this for initialization
@@ -63,6 +63,8 @@ public class MutatorController : MonoBehaviour, MachineController {
                             inventoryManager.AddBlips(-1);
                             menuController.focusStatus = MenuController.MenuStatus.activate;
                             menuController.cleanupSlate();
+                            inventoryManager.RemoveResource(input[0]);
+                            inventoryManager.RemoveResource(input[1]);
                             StartCoroutine("MutatorMiniGame");
                         }
                         else
@@ -92,6 +94,8 @@ public class MutatorController : MonoBehaviour, MachineController {
                             inventoryManager.AddBlips(-1);
                             menuController.focusStatus = MenuController.MenuStatus.activate;
                             menuController.cleanupSlate();
+                            inventoryManager.RemoveResource(input[0]);
+                            inventoryManager.RemoveResource(input[1]);
                             StartCoroutine("MutatorMiniGame");
                         }
                         else
@@ -121,6 +125,8 @@ public class MutatorController : MonoBehaviour, MachineController {
                             inventoryManager.AddBlips(-1);
                             menuController.focusStatus = MenuController.MenuStatus.activate;
                             menuController.cleanupSlate();
+                            inventoryManager.RemoveResource(input[0]);
+                            inventoryManager.RemoveResource(input[1]);
                             StartCoroutine("MutatorMiniGame");
                         }
                         else
@@ -237,8 +243,6 @@ public class MutatorController : MonoBehaviour, MachineController {
 
             }
         }
-        inventoryManager.RemoveResource(input[0]);
-        inventoryManager.RemoveResource(input[1]);
         inventoryManager.AddResource(input[0] + input[1] - 1);
         menuController.Unfocus();
     }
